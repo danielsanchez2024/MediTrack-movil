@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Profile builds only (overrides src/main's config), same as src/debug: allows plain
+     HTTP to any host so a physical device can reach the dev backend on the host's LAN IP
+     while profiling. Release builds keep the restricted config from src/main. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

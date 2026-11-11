@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Only for local development: the dev backend has no TLS in front of it yet,
+     and Android blocks plain HTTP by default from API 28 onward. Restricted to
+     the emulator's host alias, not a blanket cleartext allowance. -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

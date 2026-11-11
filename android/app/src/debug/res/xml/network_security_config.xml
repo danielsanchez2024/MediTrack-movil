@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only (overrides src/main's config): allows plain HTTP to any
+     host, so a physical device can reach the dev backend on the host's LAN IP
+     (see API_BASE_URL in build-apk.sh). Release builds keep the restricted
+     config from src/main, which only allows the emulator's host alias. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
